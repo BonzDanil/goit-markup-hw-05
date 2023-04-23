@@ -131,6 +131,9 @@ body {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu {
@@ -176,6 +179,9 @@ body {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-list {
@@ -219,7 +225,11 @@ body {
 
 .main-button:hover,
 .main-button:focus {
-    background-color: #404BBF
+    background-color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-property: visibility; */
 }
 
 .tags-h {
@@ -376,6 +386,8 @@ body {
 .social-link:hover,
 .social-link:focus {
     background-color: #404BBF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* CUSTOMERS */
@@ -411,6 +423,9 @@ body {
 .link-customers:focus {
     border-color: #404bbf;
     color: #404bbf;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -491,6 +506,9 @@ body {
 .social-link-footer:hover,
 .social-link-footer:focus {
     background-color: #31D0AA;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon-footer {
@@ -520,6 +538,11 @@ body {
     background-color: #404BBF;
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
+    
 }
 
 .four-section {
@@ -577,6 +600,9 @@ body {
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wrapper {
@@ -598,9 +624,14 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
+
+
 .link-over :hover .overlay,
 .link-over :focus .overlay {
     transform: translateY(0);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-paragraph {
@@ -641,8 +672,9 @@ body {
 
 .backdrop.is-hidden {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
+
+    visibility: hidden;
 }
 
 .backdrop {
@@ -657,6 +689,11 @@ body {
     transition-timing-function: linear;
 }
 
+/* .backdrop:hover,
+.backdrop:focus {
+    background-color: #FFFFFF;
+} */
+
 .modal {
     position: absolute;
     left: 50%;
@@ -668,6 +705,7 @@ body {
     width: 100%;
     min-height: 576px;
     transition: transform 250ms linear;
+
 }
 
 .backdrop.is-hidden .modal {
@@ -678,14 +716,34 @@ body {
     position: absolute;
     top: 24px;
     right: 24px;
-    display: inline-block;
-    background: #E7E9FC;
+    background-color: #E7E9FC;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    padding: 4px 8px;
-    box-sizing: content-box;
+    width: 24px;
+    height: 24px;
 }
 
-.close-icon {
- 
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Обратите внимание, что я удалил пробел между .close-btn и :hover / :focus. Это очень важно, так как пробел указывает на то, что вы выбираете потомка элемента, а не сам элемент. Когда вы используете пробел между селекторами, вы выбираете все элементы, которые находятся внутри элемента .close-btn, и которые имеют состояние ховера или фокуса. В вашем случае, это не то, что вам нужно. */
+
+
+.close-btn:hover svg {
+    fill: #FFFFFF; /* изменение цвета самого SVG */
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
